@@ -597,14 +597,9 @@ additive manufacturing, and machine learning-assisted design.
             const container = document.getElementById('tagcloud-container');
             // Custom project list
             const myProjects = [
-                { name: "OpenLens", html_url: "#", stargazers_count: 128 },
-                { name: "StudioBench", html_url: "#", stargazers_count: 94 },
-                { name: "TinyWorlds", html_url: "#", stargazers_count: 76 },
-                { name: "FrameWeaver", html_url: "#", stargazers_count: 63 },
-                { name: "FieldNotes AI", html_url: "#", stargazers_count: 51 },
-                { name: "SignalGarden", html_url: "#", stargazers_count: 42 },
-                { name: "AtlasKit", html_url: "#", stargazers_count: 37 },
-                { name: "ClearView", html_url: "#", stargazers_count: 29 }
+                { name: "Fatigue Analysis of Wrinkled Composite Structures", html_url: "#" },
+    { name: "Bonded Repair of Aircraft Composite Structures", html_url: "#" },
+    { name: "Damage Analysis of Horizontal Stabilizer Structures", html_url: "#" }
             ];
 
             function initTagCloud(projects) {
@@ -621,7 +616,8 @@ additive manufacturing, and machine learning-assisted design.
                     el.target = '_blank';
                     el.className = 'tagcloud-item';
                     // Show name and stars
-                    el.innerHTML = `${p.name} <span style="font-size:0.8em; opacity:0.8">🌟${p.stargazers_count}</span>`;
+                    // Show project name
+el.innerHTML = p.name;
                     el.style.color = '#444';
                     
                     container.appendChild(el);
